@@ -15,13 +15,28 @@
  */
 
 
-
- static const char *__doc_gr_jammingSource_TDMSingle = R"doc()doc";
-
-
- static const char *__doc_gr_jammingSource_TDMSingle_TDMSingle = R"doc()doc";
+static const char* __doc_gr_jammingSource_TDMSingle = R"doc()doc";
 
 
- static const char *__doc_gr_jammingSource_TDMSingle_make = R"doc()doc";
+static const char* __doc_gr_jammingSource_TDMSingle_TDMSingle_0 = R"doc()doc";
 
-  
+
+static const char* __doc_gr_jammingSource_TDMSingle_TDMSingle_1 = R"doc()doc";
+
+
+static const char* __doc_gr_jammingSource_TDMSingle_make = R"doc()doc";
+
+
+static const char* __doc_gr_jammingSource_TDMSingle_sampling_freq = R"doc()doc";
+
+
+static const char* __doc_gr_jammingSource_TDMSingle_period = R"doc()doc";
+
+
+static const char* __doc_gr_jammingSource_TDMSingle_set_sampling_freq = R"doc()doc";
+
+
+static const char* __doc_gr_jammingSource_TDMSingle_set_frequency = R"doc()doc";
+
+
+static const char* __doc_gr_jammingSource_TDMSingle_set_period = R"doc()doc";

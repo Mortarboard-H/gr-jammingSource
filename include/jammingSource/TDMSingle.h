@@ -1,6 +1,6 @@
 /* -*- c++ -*- */
 /*
- * Copyright 2022 mortarboard-H.
+ * Copyright 2022 mortarboard.
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
@@ -8,8 +8,9 @@
 #ifndef INCLUDED_JAMMINGSOURCE_TDMSINGLE_H
 #define INCLUDED_JAMMINGSOURCE_TDMSINGLE_H
 
-#include <gnuradio/sync_block.h>
 #include <jammingSource/api.h>
+#include <gnuradio/sync_block.h>
+#include <gnuradio/fxpt_nco.h>
 
 namespace gr {
 namespace jammingSource {
@@ -32,7 +33,31 @@ public:
      * class. jammingSource::TDMSingle::make is the public interface for
      * creating new instances.
      */
-    static sptr make(double samp_rate, string frequencies, double period);
+    static sptr make(double sampling_freq,
+                     std::string wave_freq,
+                     double period);
+
+    virtual double sampling_freq() const = 0;
+    virtual double period() const = 0;
+
+    /*!
+     * Sets the sampling frequency of the signal.
+     * \param sampling_freq sampling frequency
+     */
+    virtual void set_sampling_freq(double sampling_freq) = 0;
+
+    /*!
+     * Sets the frequency of a periodic signal.
+     * \param frequency frequency of the signal
+     */
+    virtual void set_frequency(std::string frequency) = 0;
+
+    /*!
+     * Sets the period of a signal.
+     * \param period period of the every loop
+     */
+    virtual void set_period(double period) = 0;
+
 };
 
 } // namespace jammingSource

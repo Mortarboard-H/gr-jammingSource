@@ -14,7 +14,7 @@
 /* BINDTOOL_GEN_AUTOMATIC(0)                                                       */
 /* BINDTOOL_USE_PYGCCXML(0)                                                        */
 /* BINDTOOL_HEADER_FILE(TDMSingle.h)                                        */
-/* BINDTOOL_HEADER_FILE_HASH(23564db3bc9fd1e14206ebdedd5d4839)                     */
+/* BINDTOOL_HEADER_FILE_HASH(fc0e36c357a97760f15dd15ef37cf4c1)                     */
 /***********************************************************************************/
 
 #include <pybind11/complex.h>
@@ -30,30 +30,44 @@ namespace py = pybind11;
 void bind_TDMSingle(py::module& m)
 {
 
-    using TDMSingle    = gr::jammingSource::TDMSingle;
+    using TDMSingle = ::gr::jammingSource::TDMSingle;
 
 
-    py::class_<TDMSingle, gr::sync_block, gr::block, gr::basic_block,
-        std::shared_ptr<TDMSingle>>(m, "TDMSingle", D(TDMSingle))
+    py::class_<TDMSingle,
+               gr::sync_block,
+               gr::block,
+               gr::basic_block,
+               std::shared_ptr<TDMSingle>>(m, "TDMSingle", D(TDMSingle))
 
         .def(py::init(&TDMSingle::make),
-           D(TDMSingle,make)
-        )
-        
+             py::arg("sampling_freq"),
+             py::arg("wave_freq"),
+             py::arg("period"),
+             D(TDMSingle, make))
 
 
+        .def("sampling_freq", &TDMSingle::sampling_freq, D(TDMSingle, sampling_freq))
+
+
+        .def("period", &TDMSingle::period, D(TDMSingle, period))
+
+
+        .def("set_sampling_freq",
+             &TDMSingle::set_sampling_freq,
+             py::arg("sampling_freq"),
+             D(TDMSingle, set_sampling_freq))
+
+
+        .def("set_frequency",
+             &TDMSingle::set_frequency,
+             py::arg("frequency"),
+             D(TDMSingle, set_frequency))
+
+
+        .def("set_period",
+             &TDMSingle::set_period,
+             py::arg("period"),
+             D(TDMSingle, set_period))
 
         ;
-
-
-
-
 }
-
-
-
-
-
-
-
-
