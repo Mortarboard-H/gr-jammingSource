@@ -8,7 +8,7 @@
 #ifndef INCLUDED_JAMMINGSOURCE_TDMSINGLE_H
 #define INCLUDED_JAMMINGSOURCE_TDMSINGLE_H
 
-#include <jammingSource/api.h>
+#include <gnuradio/jammingSource/api.h>
 #include <gnuradio/sync_block.h>
 #include <gnuradio/fxpt_nco.h>
 

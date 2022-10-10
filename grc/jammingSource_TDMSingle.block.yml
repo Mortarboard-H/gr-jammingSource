@@ -3,8 +3,8 @@ label: TDMSingle
 category: '[jammingSource]'
 
 templates:
-  imports: import jammingSource
-  make: jammingSource.TDMSingle(${samp_rate}, ${freq}, ${period})
+  imports: import gnuradio.jammingSource
+  make: gnuradio.jammingSource.TDMSingle(${samp_rate}, ${freq}, ${period})
   callbacks: 
   - set_sampling_freq(${samp_rate})
   - set_frequency(${freq})

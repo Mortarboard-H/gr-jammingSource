@@ -11,5 +11,5 @@
 ########################################################################
 install(FILES
     api.h
-    TDMSingle.h DESTINATION include/jammingSource
+    TDMSingle.h DESTINATION include/gnuradio/jammingSource
 )

@@ -32,14 +32,16 @@ list(APPEND jammingSource_python_files
     TDMSingle_python.cc python_bindings.cc)
 
 GR_PYBIND_MAKE_OOT(jammingSource
-   ../..
+   ../../..
    gr::jammingSource
    "${jammingSource_python_files}")
 
-# copy bindings extension for use in QA test module
-add_custom_command(TARGET jammingSource_python POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -E copy $<TARGET_FILE:jammingSource_python>
-    ${CMAKE_BINARY_DIR}/test_modules/jammingSource/
-)
+# copy in bindings .so file for use in QA test module
+add_custom_target(
+  copy_bindings_for_tests ALL
+  COMMAND
+    ${CMAKE_COMMAND} -E copy "${CMAKE_CURRENT_BINARY_DIR}/*.so"
+    ${CMAKE_BINARY_DIR}/test_modules/gnuradio/jammingSource/
+  DEPENDS jammingSource_python)
 
-install(TARGETS jammingSource_python DESTINATION ${GR_PYTHON_DIR}/jammingSource COMPONENT pythonapi)
+install(TARGETS jammingSource_python DESTINATION ${GR_PYTHON_DIR}/gnuradio/jammingSource COMPONENT pythonapi)

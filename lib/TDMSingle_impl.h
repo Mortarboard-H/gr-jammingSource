@@ -8,7 +8,7 @@
 #ifndef INCLUDED_JAMMINGSOURCE_TDMSINGLE_IMPL_H
 #define INCLUDED_JAMMINGSOURCE_TDMSINGLE_IMPL_H
 
-#include <jammingSource/TDMSingle.h>
+#include <gnuradio/jammingSource/TDMSingle.h>
 
 namespace gr {
 namespace jammingSource {
