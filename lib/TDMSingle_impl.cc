@@ -35,6 +35,9 @@ TDMSingle_impl::TDMSingle_impl(double sampling_freq,
     d_period(period)
 {
     set_frequency(wave_freq);
+    this->message_port_register_in(pmt::mp("cmd"));
+    this->set_msg_handler(pmt::mp("cmd"),
+                          [this](pmt::pmt_t msg) { this->set_cmd_msg(msg); });
 }
 
 /*
@@ -147,6 +150,14 @@ void TDMSingle_impl::set_period(double period)
 
     // set the current frequency count
     d_cur_sample_count = 0;
+}
+
+/*
+ * message handler
+ */
+void TDMSingle_impl::set_cmd_msg(pmt::pmt_t& msg)
+{
+    set_frequency(pmt::write_string(msg));
 }
 } /* namespace jammingSource */
 } /* namespace gr */
