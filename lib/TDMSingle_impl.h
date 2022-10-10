@@ -43,6 +43,10 @@ public:
     void set_frequency(std::string frequency) override;
     void set_period(double period) override;
 
+    // Message handlers
+    void set_cmd_msg(pmt::pmt_t msg);
+
+
 };
 
 } // namespace jammingSource
