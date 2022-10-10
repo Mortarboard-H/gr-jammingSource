@@ -4,7 +4,7 @@ A gnuradio module for jamming signal generation.
 
 ## Requirements
 
-This module is compatible with **gnuradio 3.9**.
+This module is compatible with **gnuradio 3.10**.
 
 ## Blocks
 
