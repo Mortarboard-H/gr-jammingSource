@@ -7,5 +7,6 @@
 #
 
 install(FILES
-    jammingSource_TDMSingle.block.yml DESTINATION share/gnuradio/grc/blocks
+    jammingSource_TDMSingle.block.yml
+    jammingSource_AperiodicSpectrumMatched.block.yml DESTINATION share/gnuradio/grc/blocks
 )

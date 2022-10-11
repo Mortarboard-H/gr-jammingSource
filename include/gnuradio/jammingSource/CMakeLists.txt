@@ -11,5 +11,6 @@
 ########################################################################
 install(FILES
     api.h
-    TDMSingle.h DESTINATION include/gnuradio/jammingSource
+    TDMSingle.h
+    AperiodicSpectrumMatched.h DESTINATION include/gnuradio/jammingSource
 )

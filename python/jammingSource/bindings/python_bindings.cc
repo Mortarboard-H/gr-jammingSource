@@ -22,6 +22,7 @@ namespace py = pybind11;
 /**************************************/
 // BINDING_FUNCTION_PROTOTYPES(
     void bind_TDMSingle(py::module& m);
+    void bind_AperiodicSpectrumMatched(py::module& m);
 // ) END BINDING_FUNCTION_PROTOTYPES
 
 
@@ -51,5 +52,6 @@ PYBIND11_MODULE(jammingSource_python, m)
     /**************************************/
     // BINDING_FUNCTION_CALLS(
     bind_TDMSingle(m);
+    bind_AperiodicSpectrumMatched(m);
     // ) END BINDING_FUNCTION_CALLS
 }

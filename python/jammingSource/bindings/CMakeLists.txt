@@ -29,7 +29,8 @@ include(GrPybind)
 ########################################################################
 
 list(APPEND jammingSource_python_files
-    TDMSingle_python.cc python_bindings.cc)
+    TDMSingle_python.cc
+    AperiodicSpectrumMatched_python.cc python_bindings.cc)
 
 GR_PYBIND_MAKE_OOT(jammingSource
    ../../..

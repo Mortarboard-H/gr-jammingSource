@@ -13,6 +13,7 @@ include(GrPlatform) #define LIB_SUFFIX
 
 list(APPEND jammingSource_sources
     TDMSingle_impl.cc
+    AperiodicSpectrumMatched_impl.cc
 )
 
 set(jammingSource_sources "${jammingSource_sources}" PARENT_SCOPE)
