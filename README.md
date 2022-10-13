@@ -31,3 +31,17 @@ Sample Rate: sampling frequency
 Chip Rate: Chip rate
 
 **known issue**: this block sometimes causes sudden exit with (code -11). This problem happens randomly. 
+
+**Chirp**
+
+This block generates chrip signals.
+
+Four parameters:
+
+Sample Rate: sampling frequency
+
+min frequency: the minimum frequency in the chirp
+
+max frequency: the maximum frequency in the chirp
+
+period: the length of one loop
