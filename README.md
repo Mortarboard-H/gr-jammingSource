@@ -45,3 +45,19 @@ min frequency: the minimum frequency in the chirp
 max frequency: the maximum frequency in the chirp
 
 period: the length of one loop
+
+**testSingle**
+
+This block generates signals of variant frequency. This source produces signal of one frequency for a certain time and stop and produces signals of another frequency for a certain time....
+
+Five parameters:
+
+Sample Rate: sampling frequency
+
+start frequency: the start frequency of the source.
+
+step: The frequency step added to current frequency.
+
+length: the time when jamming signal is on. In seconds
+
+interval: the time between each frequency. In seconds.
