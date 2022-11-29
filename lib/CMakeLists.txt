@@ -15,6 +15,7 @@ list(APPEND jammingSource_sources
     TDMSingle_impl.cc
     AperiodicSpectrumMatched_impl.cc
     Chirp_impl.cc
+    TestSingle_impl.cc
 )
 
 set(jammingSource_sources "${jammingSource_sources}" PARENT_SCOPE)

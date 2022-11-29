@@ -9,5 +9,6 @@
 install(FILES
     jammingSource_TDMSingle.block.yml
     jammingSource_AperiodicSpectrumMatched.block.yml
-    jammingSource_Chirp.block.yml DESTINATION share/gnuradio/grc/blocks
+    jammingSource_Chirp.block.yml
+    jammingSource_TestSingle.block.yml DESTINATION share/gnuradio/grc/blocks
 )
