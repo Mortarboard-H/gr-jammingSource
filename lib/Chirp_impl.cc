@@ -92,7 +92,7 @@ void Chirp_impl::reset_all()
 {
     // set d_samples per loop
     double samples_per_loop = d_period * d_sampling_frequency;
-    d_samples_per_loop = (int) samples_per_loop;
+    d_samples_per_loop = (long long int) samples_per_loop;
 
     // set frequency increments per sample
     d_freq_inc_per_sample = (d_max_frequency - d_min_frequency) / (double)d_samples_per_loop;

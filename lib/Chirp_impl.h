@@ -21,8 +21,8 @@ private:
     double d_period;
     double d_max_frequency;
     double d_min_frequency;
-    int d_samples_per_loop;
-    int d_count;
+    long long int d_samples_per_loop;
+    long long int d_count;
     double d_freq_inc_per_sample;
     gr::fxpt_nco d_nco;
 public:
