@@ -44,7 +44,7 @@ GainTest_impl::GainTest_impl(double samp_rate,
     d_gain_start(gain_start),
     d_gain_step(gain_step)
 {
-    reset_all();
+    this->reset_all();
 }
 
 void GainTest_impl::reset_all()
@@ -57,25 +57,25 @@ void GainTest_impl::reset_all()
 void GainTest_impl::set_sampling_freq(double samp_rate)
 {
     d_sampling_frequency = samp_rate;
-    reset_all();
+    this->reset_all();
 }
 
 void GainTest_impl::set_length_per_gain(double length_per_gain)
 {
     d_length_per_gain = length_per_gain;
-    reset_all();
+    this->reset_all();
 }
 
 void GainTest_impl::set_gain_start(double gain_start)
 {
     d_gain_start = gain_start;
-    reset_all();
+    this->reset_all();
 }
 
 void GainTest_impl::set_gain_step(double gain_step)
 {
     d_gain_step = gain_step;
-    reset_all();
+    this->reset_all();
 }
 /*
  * Our virtual destructor.

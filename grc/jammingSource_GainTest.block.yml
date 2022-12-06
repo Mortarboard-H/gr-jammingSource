@@ -5,7 +5,7 @@ category: '[jammingSource]'
 templates:
   imports: from gnuradio import jammingSource
   make: jammingSource.GainTest(${samp_rate}, ${length_per_gain}, ${gain_start}, ${gain_step})
-callbacks: 
+  callbacks: 
   - set_sampling_freq(${samp_rate})
   - set_length_per_gain(${length_per_gain})
   - set_gain_start(${gain_start})
