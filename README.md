@@ -61,3 +61,9 @@ step: The frequency step added to current frequency.
 length: the time when jamming signal is on. In seconds
 
 interval: the time between each frequency. In seconds.
+
+**gainTest**
+
+This block implements a simple gain control method. Signals pass through will be add the desired gain by dB.
+
+The added gain start from "start" and add "step" per "period"
